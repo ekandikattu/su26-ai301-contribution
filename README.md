@@ -1,15 +1,18 @@
-# Contribution [#]: [Issue Title]
+# Contribution [1]: [Add compatibility test for $stdDevPop (second pass)
+]
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** [Eeshan Kandikattu]  
+**Issue:** [[GitHub issue link](https://github.com/documentdb/functional-tests/issues/196)]  
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose issue #196 "Add compatibility test for $stdDevPop (second pass)" because it aligns with my Python experience and my goal to better implement and understand testing. The issue is labeled "good first issue" and has clear run instructions in the README and clear task instruction in the issue title.
+
+I'm interested in this because I've not delved very deeply into testing and creating testing for specific features/behaviors in my projects. This is something I want to work on and develop through this codebase on an issue meant for first timers.
 
 ---
 
