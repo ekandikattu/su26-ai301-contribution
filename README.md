@@ -4,7 +4,7 @@
 **Contribution Number:** [1]  
 **Student:** [Eeshan Kandikattu]  
 **Issue:** [[GitHub issue link](https://github.com/documentdb/functional-tests/issues/196)]  
-**Status:** [Phase I] [Complete]
+**Status:** [Phase II] [In-Progress]
 
 ---
 
@@ -40,13 +40,22 @@ I'm interested in this because I've not delved very deeply into testing and crea
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+The environment setup seemed straightforward because the README.md was easy to understand and follow for new contributors. I had to install dependencies from the requirements.txt file, but ended up fixing a few things after running the tests.
+
+Tests were missing even though I installed them with `python -m pytest` because I did not have my project `.venv` activated. There was also no database to test against automatically because I would have to set it up. I installed MongoDB Community Server 8.3.4 via `winget install --id MongoDB.Server -e`, which runs as a Windows service on `localhost:27017`.
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Fork and clone the repo, then `cd functional-tests`.
+2. Create and activate a virtual environment: `python -m venv .venv` then `.\.venv\Scripts\Activate.ps1 (PowerShell)`. Confirm the prompt shows `(.venv)`.
+3. Install dev dependencies: `pip install -r requirements-dev.txt`.
+4. Install the contribution prerequisites: `set git config user.name`, add the upstream remote, and run `pre-commit install -t pre-commit -t prepare-commit-msg -t pre-push`.
+5. Install a MongoDB instance (I used `winget install --id MongoDB.Server -e`); confirm the service is running and `localhost:27017` is reachable.
+6. Run the operator's tests:
+
+`pytest documentdb_tests/compatibility/tests/core/operator/accumulators/stdDevPop/ -v \
+  --connection-string mongodb://localhost:27017 --engine-name mongodb`
+7. Did not confirm this fully yet! Will do this week.
 
 ### Reproduction Evidence
 
